@@ -1,0 +1,42 @@
+<form action="controller/insert_common.php" method="POST">
+	<label>Nome: </label>
+	<input type="text" name="person_name" placeholder="Digite o nome" class="form-control" required>
+	<br>
+	
+	<label>Email: </label>
+	<input type="email" name="person_email" placeholder="Digite o email" class="form-control" required><br>
+
+	<label>Endereço: </label>
+	<input type="text" name="contact_address" placeholder="Digite o endereço" class="form-control"><br>
+	
+	<label>Facebook: </label>
+	<input type="text" name="contact_facebook" placeholder="Digite o endereço do facebook" class="form-control"><br>
+	
+	<label>Twitter: </label>
+	<input type="text" name="contact_twitter" placeholder="Digite o endereço do twitter" class="form-control"><br>
+	
+	<label>Fone: </label>
+	<input type="text" name="phone_number" placeholder="Digite o número" class="form-control" required><br>
+	
+	<label>Operadora: </label>
+	<select name="phone_operator" required class="form-control">
+		<option value="" selected> -- Selecione -- </option> 
+		<option>Oi</option>
+		<option>Tim</option>
+		<option>Claro</option>
+		<option>Vivo</option>
+	</select><br>
+	
+	<label>Tipo do Fone: </label>
+	<input type="radio" required name="phone_type" value="Fixo">Fixo
+	<input type="radio" required name="phone_type" value="Móvel">Móvel
+	<br><br>
+	
+	<input type="hidden" name="user_id" value="<?php echo $user_on->get_id_person(); ?>">
+	<input type="hidden" name="table" value="3">
+	
+	<input type="submit" class="btn btn-success" value="Confirmar dados">
+</form>
+
+
+
